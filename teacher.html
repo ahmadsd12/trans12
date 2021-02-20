@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>teacher</title>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+         <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRw-DgCHL8tRiJzkjQDbFmqTdZ3nty0ws0jQ&usqp=CAU" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+          <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    </head>
+    <body>
+        <div class="nav">
+            <div class="btn" id="btn">
+            <div class="br1"></div>
+            <div class="br2"></div>
+            <div class="br3"></div>
+        </div>
+        <ul id="nav">
+            <li class="animated fadeInUp"><a href="cv.html">cv</a></li>
+            <li class="animated fadeInUp"><a href="lessons.html">lesson</a></li>
+            <li class="animated fadeInUp"><a href="teacher.html">teacher</a></li>
+            <li class="animated fadeInUp"><a href="logine.html">login</a></li>
+            
+        </ul>
+        </div>
+        
+        <header>
+            <div class="content">
+            <div>
+    <label for='file'>input your cv here</label><br><br>
+    <input type="file" id="file" multiple ><br>
+          </div> 
+         
+            </div>
+        </header>
+        <script>
+            var btn = document.querySelector("#btn");
+            var nav = document.querySelector("#nav");
+            var m = 0;
+            btn.addEventListener('click', () =>{
+                if(m == 0){
+                    m = 1;
+                    btn.classList.add("act")
+                    nav.style.display = "block";
+                }else{
+                    m = 0;
+                   btn.classList.remove("act");
+                   nav.style.display = "none";
+                    
+                }
+            });
+            
+                var typed3 = new Typed('#text', {
+      strings: ['university','science dept ','computer science','collage'], typeSpeed: 80, backSpeed: 50, smartBackspace: true, loop: true,
+    });
+        </script>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,400;1,700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Josefin Sans';
+    text-decoration:none;
+}
+
+body {
+    background:#fff;
+    height:100vh;
+}
+.nav{
+    width:100%;
+    background:#000;
+    padding:18px 0;
+    padding-top:0;
+    display:block ;
+    transition:all 0.5s;
+    overflow:hidden;
+    border-bottom:0.5px solid #fff;
+}
+
+/* menu btn */
+.btn{
+    width:50px;
+    height:38px;
+    padding:10px;
+    background:#000;
+    margin-left:83%;
+    transition:all 0.5s;
+    z-index:1000;
+}
+.btn .br1{
+    width:100%;
+    margin-top:3px;
+    height:3px;
+    background:#fff;
+    transition:0.5s;
+}
+.btn .br2{
+    width:100%;
+    height:3px;
+    margin:8px 0;
+    background:#fff;
+    transition:0.5s;
+}
+.btn .br3{
+    width:100%;
+    height:3px;
+    background:#fff;
+    transition:0.5s;
+}
+.act .br1{
+    transform:rotate(405deg) translateY(7px) translateX(9px);
+}
+.act .br2{
+    opacity:0;
+}
+.act .br3{
+    transform:rotate(-405deg) translateY(-7px) translateX(9px);
+}
+
+/* // menu btn */
+
+.nav ul{
+    width:100%;
+    list-style:none;
+    text-align:left;
+    margin-top:20px;
+    transition:all 0.5s;
+    display:none ;
+}
+.nav ul li{
+    padding:15px 0;
+    margin:2px;
+    width:100%;
+    background:#131419;
+}
+.nav ul li a{
+    padding:10px 20px;
+    color:#fff;
+}
+.nav ul li:hover a{
+    margin-left:10px;
+    transition:0.5s;
+}
+/* // end nav */
+header{
+    width:100%;
+    height:100vh;
+    background:url(https://dl.dropbox.com/s/ai15a0m9dwkpahu/Qasim%20header.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+header .content{
+    width:85%;
+    color:#fff;
+}
+header .content h1{
+    font-size:25px;
+    padding:10px 0;
+    animation-delay:2s;
+    position: absolute;
+}
+
+        
+        </style>
+    </body>
+</html>
